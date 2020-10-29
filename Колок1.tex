@@ -72,13 +72,13 @@
 \textbf{Доказательство:} Предположим, что $a-b = \varepsilon > 0$. Тогда найдутся номера $N_1 \in N$ и $N_2 \in N$, для которых $|a_n - a| < \frac{\varepsilon}{2}$ при $n > N_1$, и $|b_n-b| < \frac{\varepsilon}{2}$ при $n > N_2$. Тогда $\varepsilon = a - b = a - a_n + a_n - b_n + b_n - b \leq a - a_n + b_n - b < \varepsilon$. Противоречие. 
 
 \item \textbf{ Лемма о зажатой последовательности} \\
-Пусть $\lim_{n \to \infty}{a_n = a}$ и $\lim_{n \to \infty}{b_n = b}$ и для некоторого $n \in N$ выполнено неравенство: $a_n \leq c_n \leq b_n$ при $n > N$. Тогда $\lim_{n \to \infty}{c_n = a}$. \\
-\textbf{Доказательство:} Для каждого $\varepsilon > 0$ найдутся номера $N_1 \in N$ и $N_2 \in N$, для которых $|a_n - a| < \varepsilon$ и $|b_n - b| < \varepsilon$. Тогда при $n > max\{N, N_1, N_2\}$ выполнено: $a - \varepsilon < a_n \leq c_n \leq b_n < b + \varepsilon$.
+Пусть $\lim_{n \to \infty}{a_n} = \lim_{n \to \infty}{b_n} = b$ и для некоторого $N \in \mathbb{N}$ выполнено неравенство: $a_n \leq c_n \leq b_n$ при $n > N$. Тогда $\lim_{n \to \infty}{c_n = a}$. \\
+\textbf{Доказательство:} Для каждого $\varepsilon > 0$ найдутся номера $N_1 \in \mathbb{N}$ и $N_2 \in \mathbb{N}$, для которых $|a_n - a| < \varepsilon$ и $|b_n - a| < \varepsilon$. Тогда при $n > max\{N, N_1, N_2\}$ выполнено: $a - \varepsilon < a_n \leq c_n \leq b_n < a + \varepsilon$.
 
 \item \textbf{Принцип вложенных отрезков} \\
 Пусть $a, b \in R$ и $a < b$. Множества $[a; b] := \{x \in R: a \leq x \leq b\}$, $(a;b) := \{ x \in R: a < x < b \}$ называются отрезком и интервалом соответственно. Длиной отрезка (интервала) называется величина $b - a$. \\
 \textbf{Теорема:} Всякая последовательность $\{[a_n, b_n]\}_{n=1}^{\infty}$ вложенных отрезков (т.е. $[a_{n+1};b_{n+1}] \subset [a_{n};b_{n}]$) имеет общую точку. Кроме того, если длины отрезков стремятся к нулю, т.е. $b_n - a_n \longrightarrow 0$, то такая общая точка только одна. \\
-\textbf{Доказательство:} по условию $[a_{n+1}; b_{n+1}] \subset [a_{n}; b_{n}]$, откуда $a_{n+1} \leq a_n \leq b_n \leq b_{n+1}$. Заметим, что при $n < m$ выполнено $a_n \leq a_m \leq b_m$, а при $n > m$ выполнено $a_n \leq b_n \leq b_m$. Таким образом, если $A :=\{a_n, n \in N\}$ и $B := \{b_m, m \in N\}$, то $A$ левее $B$, а значит по принципу полноты найдется такое число $c \in R$, что $a_n \leq c \leq b_m$ для произвольных $n, m \in N$, в частности $a_n \leq c \leq b_n$ т.е. $c \in [a_n; b_n]$. \\
+\textbf{Доказательство:} по условию $[a_{n+1}; b_{n+1}] \subset [a_{n}; b_{n}]$, откуда $a_{n} \leq a_{n+1} \leq b_{n+1} \leq b_n$. Заметим, что при $n < m$ выполнено $a_n \leq a_m \leq b_m$, а при $n > m$ выполнено $a_n \leq b_n \leq b_m$. Таким образом, если $A :=\{a_n, n \in \mathbb{N}\}$ и $B := \{b_m, m \in \mathbb{N}\}$, то $A$ левее $B$, а значит по принципу полноты найдется такое число $c \in \mathbb{R}$, что $a_n \leq c \leq b_m$ для произвольных $n, m \in N$. В частности $a_n \leq c \leq b_n$ т.е. $c \in [a_n; b_n]$. \\
 Пусть общих точек две: $c$ и $c'$. Не ограничивая общности $c < c'$. Тогда $a_n \leq c < c' \leq b_n$ и $c' - c \leq b_n - a_n$, что противоречит тому, что $\lim_{n \to \infty}{(b_n - a_n)} = 0$. Действительно, найдется номер $N$, для которого $b_n - a_n < c' - c$ при каждом $n > N$.
 
 \item \textbf{Геометрическая интерпретация вещественных чисел, вещественная прямая.} \\
