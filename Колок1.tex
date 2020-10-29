@@ -63,15 +63,7 @@
     \item \textbf{Единственность предела}
     Пусть  $\lim_{n \to \infty} a_n\ = a$ и $\lim_{n \to \infty} a_n\ = b$, тогда a = b. \\
     \textbf{Доказательство:} Если $a \neq b$, то $|a - b| = \varepsilon_0 > 0$. Но по определению найдется номер $N_1$, для которого $|a_n - a| < \frac{\varepsilon_0}{2}$ при $n > N_1$ и найдется номер $N_2$, для которого $|a_n - b| < \frac{\varepsilon_0}{2}$ при $n > N_2$. Тогда при $n > max \{N_1, N_2\} : \varepsilon_0 = |a - b| = |a - a_n + a_n - b| \leq |a - a_n| + |a_n - b| < \varepsilon_0$. Противоречие.
-    \item \textbf{Арифметика предела.}
-    $\lim_{n \to \infty} a_n\ = a$ и $\lim_{n \to \infty} b_n\ = b$\\
-    1) $ \lim_{n \to \infty} (\lambda a_n + \beta b_n) = \lambda a + \beta b \;  \forall a, b \in R $ \\
-    2) $\lim_{n \to \infty} a_n b_n\ = ab$\\
-    3) Если $b \neq 0, b_n \neq 0$, то $\lim_{n \to \infty} \frac{a_n}{b_n}\ = \frac{a}{b}$. \\
-    \textbf{Доказательство:} Пусть $\varepsilon > 0$ - произвольное число. Тогда найдется номер $N_1$, для которого $|a_n - a| < \varepsilon$, и найдется номер $N_2$, для которого $|b_n - b| < \varepsilon$\\
-    1) При $n > N = max\{ N_1, N_2 \} : |\lambda a_n + \beta b_n - (\lambda a + \beta b)| = |\lambda(a_n - a) + \beta(b_n - b)| \leq |\lambda| |a_n - a| + |\beta| |b_n - b| < (|\lambda| + |\beta|)\varepsilon$ \\
-    2) Заметим, что $|a_n b_n - a b| = |a_n b_n - a b_n + a b_n - a b| \leq |b_n| |a_n - a| + |a| |b_n - b|$. Т.к. сходящаяся последовательность ограничена, то найдется $M > 0$, для которого $|b_n| \leq M$, поэтому при  $n > N = max\{ N_1, N_2\}$ выполнено $|a_n b_n - a b| \leq (M + |a|)\varepsilon$\\
-    3) Достаточно проверить, что $\frac{1}{b_n} \to \frac{1}{b}$ при $n \to \infty$. Заметим, что по условию $b \neq 0$, поэтому найдется номер $N_3 \in N$, для которого при $n > N_3$ выполнено $|b_n| > \frac{|b|}{2}$. Тогда при $n > max \{N_2, N_3\}$ выполнено \[|\frac{1}{b_n} - \frac{1}{b}| = \frac{|b_n - b|}{|b_n| |b|} \leq \frac{2}{|b|^2} * \varepsilon\]
+    
     \item \textbf{Ограниченность сходящейся последовательности}:\\
     Утверждение: сходящаяся последовательность ограничена\\
     \textbf{Доказательство:} Если $\lim_{n \to \infty} a_n\ = a$, то для некоторого $N \in \mathbb{N}$ выполнено  
@@ -88,6 +80,16 @@
     \item \textbf{Отделимость}:
     Если $a_n \to a$ и $a \neq 0$, то найдется номер $N \in \mathbb{N}$, для которого $|a_n| > \frac{|a|}{2} > 0$ при $n > N$.\\
     \textbf{Доказательство:} Взяв $\varepsilon = \frac{|a|}{2}$ в определении сходимости последовательности к числу $a$, получаем номер $N \in \mathbb{N}$, для которого $|a_n - a| < \frac{|a|}{2}$ при $n > N$. Тогда при $n > N$, выполнено $|a| - |a_n| \leq |a_n - a| < \frac{|a|}{2}$, что равносильно тому, что мы доказываем.
+    
+    \item \textbf{Арифметика предела.}
+    $\lim_{n \to \infty} a_n\ = a$ и $\lim_{n \to \infty} b_n\ = b$\\
+    1) $ \lim_{n \to \infty} (\lambda a_n + \beta b_n) = \lambda a + \beta b \;  \forall a, b \in R $ \\
+    2) $\lim_{n \to \infty} a_n b_n\ = ab$\\
+    3) Если $b \neq 0, b_n \neq 0$, то $\lim_{n \to \infty} \frac{a_n}{b_n}\ = \frac{a}{b}$. \\
+    \textbf{Доказательство:} Пусть $\varepsilon > 0$ - произвольное число. Тогда найдется номер $N_1$, для которого $|a_n - a| < \varepsilon$, и найдется номер $N_2$, для которого $|b_n - b| < \varepsilon$\\
+    1) При $n > N = max\{ N_1, N_2 \} : |\lambda a_n + \beta b_n - (\lambda a + \beta b)| = |\lambda(a_n - a) + \beta(b_n - b)| \leq |\lambda| |a_n - a| + |\beta| |b_n - b| < (|\lambda| + |\beta|)\varepsilon$ \\
+    2) Заметим, что $|a_n b_n - a b| = |a_n b_n - a b_n + a b_n - a b| \leq |b_n| |a_n - a| + |a| |b_n - b|$. Т.к. сходящаяся последовательность ограничена, то найдется $M > 0$, для которого $|b_n| \leq M$, поэтому при  $n > N = max\{ N_1, N_2\}$ выполнено $|a_n b_n - a b| \leq (M + |a|)\varepsilon$\\
+    3) Достаточно проверить, что $\frac{1}{b_n} \to \frac{1}{b}$ при $n \to \infty$. Заметим, что по условию $b \neq 0$, поэтому найдется номер $N_3 \in N$, для которого при $n > N_3$ выполнено $|b_n| > \frac{|b|}{2}$. Тогда при $n > max \{N_2, N_3\}$ выполнено \[|\frac{1}{b_n} - \frac{1}{b}| = \frac{|b_n - b|}{|b_n| |b|} \leq \frac{2}{|b|^2} * \varepsilon\]
   
 \end{itemize}
 \section{Билет}
